@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Index Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url("{{ url_for('static', filename='background.jpg') }}");
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 100px;
+      font-size: 3em;
+    }
+
+    a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 1.2em;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 15px;
+      border-radius: 8px;
+    }
+
+    a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    p {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Capture Moments!</h1>
+  <p>
+    <a href="{{ url_for('home') }}">Go to Home</a>
+    <a href="{{ url_for('book') }}">Book Now</a>
+    <a href="{{ url_for('booking_history') }}">Booking History</a>
+  </p>
+</body>
+</html>
